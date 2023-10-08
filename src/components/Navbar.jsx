@@ -45,7 +45,7 @@ const Navbar = () => {
         <div className="flex flex-row justify-center items-center ">
           {/* here is a issue */}
         <div className="text-xs md:text-base mx-4" > {user && user.fullName ? `Welcome, ${user.fullName}` : 'Loading... 🤔'}</div>
-        <UserButton afterSignOutUrl="/"/>
+        <UserButton className="" afterSignOutUrl="/"/>
         </div>
 
       </div>

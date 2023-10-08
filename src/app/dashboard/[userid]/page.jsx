@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-// import { SwitchForm } from "@/components/ui/switch";
+
 // import Image from "next/image";
 import { useState } from "react";
 
@@ -12,9 +12,10 @@ import { useAuth } from "@clerk/nextjs";
 import dynamic from 'next/dynamic'
 
 
+
 const Link = dynamic(() => import("next/link"));
 const Image  = dynamic(()=> import("next/image"));
-// Social Media Content Crafting
+
 
 import { useAppContext } from '@/contexts/dashboardContext';
 // import ReactMarkdown from 'react-markdown'
@@ -33,7 +34,7 @@ export default function Home() {
   const handleRadioChange = (value) => {
     // setSelected(value);
     dispatch({ type: 'SELECT', payload: value });
-    console.log(value);
+    // console.log(value);
   };
 
   const handleTopicInputChange = (event) => {
@@ -59,8 +60,8 @@ export default function Home() {
     // !state.generatedText
 
 
-    console.log(userId, " User id ");
-    console.log(decryptData(state.generatedText), "decrypted Data")
+    // console.log(userId, " User id ");
+    // console.log(decryptData(state.generatedText), "decrypted Data")
 
     try {
       const res = await fetch("http://localhost:3000/api/posts", {
@@ -84,10 +85,10 @@ export default function Home() {
   }
 
   const generateText = () => {
-    console.log("Generating text...")
+    // console.log("Generating text...")
 
-    console.log(state.selected, "selected value");
-    console.log(state.topicValue, " topic value");
+    // console.log(state.selected, "selected value");
+    // console.log(state.topicValue, " topic value");
 
     if (!state.selected || !state.topicValue) {
       // setErrorMessage("Please select a social media platform and enter the topic");
@@ -125,9 +126,9 @@ export default function Home() {
 
       const wordCount = platformToWordCount[selected] || 1000;
 
-      console.log(state.selected, "selected value from generator");
-      console.log(state.topicValue, " topic value from generator ");
-      console.log(wordCount, " word Count value from generator ");
+      // console.log(state.selected, "selected value from generator");
+      // console.log(state.topicValue, " topic value from generator ");
+      // console.log(wordCount, " word Count value from generator ");
 
       // setLoading(true);
       const response = await fetch("/api/generator", {
@@ -146,11 +147,11 @@ export default function Home() {
 
         // Check if the response contains the 'tweet' property
         if (jsonResponse.hasOwnProperty("tweet")) {
-          console.log(jsonResponse.tweet, "json response ")
+          // console.log(jsonResponse.tweet, "json response ")
 
           // Convert jsonResponse.tweet array to string
           const joinedTweet = jsonResponse.tweet.join("");
-          console.log(joinedTweet, "Converted response")
+          // console.log(joinedTweet, "Converted response")
 
           // // Update generatedText in the context API
           // dispatch({ type: 'SET_GENERATED_TEXT', payload: jsonResponse.tweet });
@@ -222,7 +223,7 @@ export default function Home() {
 
 
     <>
-      <div className="container w-full flex justify-start flex-col">
+      <div className="container w-full flex justify-start flex-col ">
         <h2 className="text-gray-900 font-bold text-2xl mb-4 mt-7">
           Social Content Generation
         </h2>
@@ -260,7 +261,7 @@ export default function Home() {
 
         <div className="flex justify-between w-full mt-4">
 
-          <Button className="text-xs w-auto mx-3"
+          <Button className="text-xs md:text-sm w-auto mx-3"
             onClick={handleSave}
           >
             Save Post</Button>

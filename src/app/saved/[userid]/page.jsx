@@ -70,7 +70,7 @@ export default function Home() {
 
                 {posts.length > 0 ? posts.map((post, idx) => (
                     <Textarea key={idx} defaultValue={post.post} />
-                )) : <p>No posts saved yet.</p>
+                )) : <p>Coming Soon.</p>
                 }
             </div>
 

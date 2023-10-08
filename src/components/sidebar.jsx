@@ -1,22 +1,15 @@
 "use client"
-// import Image from "next/image";
-import Link from "next/link";
 
-
-
-import { Montserrat } from "next/font/google"
-
-// import Link from "next/link";
-// import Image from "next/image";
-import { Film, LayoutDashboard, Save } from "lucide-react";
+import { LayoutDashboard, Save } from "lucide-react";
 import { usePathname } from "next/navigation";
 
 import { cn } from "@/lib/utils";
+import dynamic from 'next/dynamic'
 
-// const montserrat = Montserrat({ weight: "600", subsets: ["latin"] })
 import { useAuth } from "@clerk/nextjs";
 
 
+const Link = dynamic(() => import("next/link"));
 
 const routes = [
     {
@@ -50,13 +43,11 @@ const SideBar = () => {
     };
 
 
-    // 191970
-
     return (
         // <div className="space-y-4 py-4 flex flex-col h-full bg-[#FFDAB9] text-white w-1/5 " >
         <div className="space-y-4 py-4 flex flex-col h-full bg-[#FFDAB9] text-white md:w-1/5 md:mt-[-4]">
 
-            <div className="px-3 py-2 flex-1"  >
+            <div className="px-3 py-2 flex-1 "  >
 
                 <div className="space-y-1" >
 
