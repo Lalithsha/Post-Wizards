@@ -1,7 +1,7 @@
 
-import Navbar from '@/components/navbar'
+import Navbar from '@/components/Navbar'
 import SideBar from '@/components/sidebar'
-import { AppProvider } from '@/contexts/dashboardContext';
+import { AppProvider } from '@/contexts/DashboardContext';
 import MobileSidebar from '@/components/Mobile-sidebar';
 
 

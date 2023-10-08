@@ -2,9 +2,9 @@
 
 "use client"
 
-import Navbar from "@/components/navbar";
+// import Navbar from "@/components/navbar";
 // import SideBar from "@/components/sidebar";
-import SideBar from "@/components/newsidebar";
+// import SideBar from "@/components/newsidebar";
 import { Textarea } from "@/components/ui/textarea";
 
 import { useAuth } from "@clerk/nextjs";
@@ -16,7 +16,7 @@ import { useState, useEffect } from 'react';
 
 export default function Home() {
 
-    const { userId } = useAuth();
+    // const { userId } = useAuth();
 
     const [posts, setPosts] = useState([]);
 

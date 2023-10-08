@@ -17,7 +17,7 @@ const Link = dynamic(() => import("next/link"));
 const Image  = dynamic(()=> import("next/image"));
 
 
-import { useAppContext } from '@/contexts/dashboardContext';
+import { useAppContext } from '@/contexts/DashboardContext';
 // import ReactMarkdown from 'react-markdown'
 
 import { encryptData, decryptData } from '@/utils/encryption';
